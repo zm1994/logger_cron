@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  etl:
+    image: etl:teg
+    build: .
+    ports:
+      - "1880:1880"
+    environment:
+      - PORT=1880
+    volumes:
+      - .:/app
+    command: ["npm", "run", "dev_server"]

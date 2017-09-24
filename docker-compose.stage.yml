@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  etl:
+    ports:
+      - "1880:1880"
+    environment:
+      - PORT=1880
+    command: ["npm", "run", "server"]
